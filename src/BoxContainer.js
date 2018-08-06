@@ -11,7 +11,6 @@ let makeIdSpread = (numBoxes, numPictures) => {
 class BoxContainer extends React.Component {
     constructor(props) {
         super(props);
-        console.log(images);
         this.state = {id: makeIdSpread(9, images.length)};
     }
     componentDidMount() {
@@ -28,7 +27,6 @@ class BoxContainer extends React.Component {
         this.setState((prevState, props) => {
             let oldState = JSON.parse(JSON.stringify(prevState.id));
             oldState[makeId(9)] = makeId(images.length);
-            console.log(oldState);
             return {
                 id: oldState
             };
