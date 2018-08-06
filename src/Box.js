@@ -31,7 +31,7 @@ class Box extends React.Component {
     render() {
         return (
             <span className="Box">
-            <img src={images[this.props.id]} width="300px" height="250px" alt=""/>
+            <img src={images[this.props.id]} width="325px" height="250px" alt=""/>
             </span>
         );
     }
