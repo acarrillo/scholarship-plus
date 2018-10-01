@@ -1,2 +1,10 @@
 span.Box {
+    width: 325px;
+    height: 250px;
+    display: inline-flex;
+    overflow: hidden;
+    font-family: sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
 }

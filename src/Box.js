@@ -2,7 +2,7 @@ import React from 'react';
 import './Box.css';
 
 // All images are originally 800x600
-const images = [
+const stock_images = [
     "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX4269382.jpg",
     "https://thumbs.dreamstime.com/b/call-center-headset-woman-sign-18884686.jpg",
     "https://thumbs.dreamstime.com/b/desperate-teacher-16488779.jpg",
@@ -27,13 +27,27 @@ const images = [
     "https://previews.123rf.com/images/kk5hy/kk5hy0707/kk5hy070700359/1267937-man-furious-with-his-bad-stock-trades-taking-it-out-on-his-computer-by-shooting-at-it-.jpg"
 ]
 
+const splus_images = [
+    // FILES.js (private)
+]
+
+const images = splus_images;
+
 class Box extends React.Component {
     render() {
-        return (
-            <span className="Box">
-            <img src={images[this.props.id]} width="325px" height="250px" alt=""/>
-            </span>
-        );
+        let content;
+        if (this.props.text != null) {
+            content = (<span className="Box">{this.props.text}</span>
+            );
+        }
+        else {
+            content = (<span className="Box">
+                <img src={images[this.props.id]} width="325px" height="250px" alt=""/>
+                </span>
+            );
+
+        }
+        return content;
     }
 }
 
